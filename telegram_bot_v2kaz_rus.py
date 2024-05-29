@@ -10,7 +10,7 @@ import os
 import re
 import logging
 
-from openai_gpt import process_question
+# from openai_gpt import process_question
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -213,7 +213,7 @@ dp.include_router(router)
 async def main():
     # get_iam_token()
     # task = asyncio.create_task(refresh_iam_token())
-    _ = task
+    # _ = task
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot, skip_updates=True)
 
